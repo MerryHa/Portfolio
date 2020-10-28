@@ -47,6 +47,12 @@ ul {
   list-style: none;
   padding-left: 0;
 }
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
 
 /* Typography */
 h1 {
@@ -103,4 +109,31 @@ p {
 }
 .navbar__menu__item:hover {
   background-color: var(--color-dark-pink);
+}
+
+/* Home */
+#home {
+  text-align: center;
+  background: url(imgs/homebackground.png) center/cover;
+  padding: 40px;
+}
+.home__avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid var(--color-light-white);
+}
+.home__title,
+.home__description,
+.home__contact {
+  color: var(--color-white);
+}
+.home__contact {
+  text-transform: uppercase;
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin: 24px;
+  border: 2px solid var(--color-white);
+  border-radius: var(--size-border-radius);
+  padding: 8px 12px;
 }
