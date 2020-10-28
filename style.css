@@ -141,9 +141,11 @@ p {
 /* Section common*/
 .section {
   text-align: center;
-  padding: 50px;
+}
+.section__container {
   max-width: 1200px;
   margin: auto;
+  padding: 50px;
 }
 
 /* About */
@@ -198,4 +200,52 @@ p {
 }
 .job__period {
   font-size: var(--font-micro);
+}
+
+/* Skills */
+#skills {
+  background: var(--color-yellow);
+}
+.skillset {
+  display: flex;
+  background: var(--color-light-grey);
+  color: var(--color-light-white);
+  font-size: var(--font-small);
+  margin: 24px 0;
+}
+
+.skillset__title {
+  color: var(--color-white);
+}
+
+.skillset__left {
+  flex-basis: 60%;
+  background: var(--color-dark-grey);
+  padding: 20px 40px;
+}
+.skill {
+  margin-bottom: 32px;
+}
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+.skill_bar {
+  background: var(--color-light-grey);
+  height: 3px;
+}
+.skill__Value {
+  background: var(--color-orange);
+  height: 3px;
+}
+.skillBox__right {
+  flex-basis: 40%;
+}
+.tools {
+  background: var(--color-grey);
+}
+.etc,
+.tools {
+  padding: 20px;
 }
