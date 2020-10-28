@@ -9,36 +9,39 @@
     <script src="https://kit.fontawesome.com/3e5d636dca.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="imgs/favicon.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_demo.css">
     <script src="main.js" defer></script>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav id="navbar">
-        <div class="navbar__logo">
-            <img src="imgs/favicon.png" alt="">
-            <a href="#">Merry</a>
-        </div>
-        <ul class="navbar__menu">
-            <li class="navbar__menu__item">Home</li>
-            <li class="navbar__menu__item">About</li>
-            <li class="navbar__menu__item">Skills</li>
-            <li class="navbar__menu__item">My work</li>
-            <li class="navbar__menu__item">Testimonial</li>
-            <li class="navbar__menu__item">Contact</li>
-        </ul>
-    </nav>
+    <div id="background">
+            <!-- Navbar -->
+        <nav id="navbar">
+            <div class="navbar__logo">
+                <i class="fas fa-chess-knight"></i>
+                <a href="#">MERRY</a>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__menu__item">Home</li>
+                <li class="navbar__menu__item">About</li>
+                <li class="navbar__menu__item">Skills</li>
+                <li class="navbar__menu__item">My work</li>
+                <li class="navbar__menu__item">Testimonial</li>
+                <li class="navbar__menu__item">Contact</li>
+            </ul>
+        </nav>
 
-    <!-- Home -->
-    <section id="home">
-        <img src="imgs/avatar.png" alt="Merry's portfolio photo" class="home__avatar">
-        <h1 class="home__title">Hello,<br>I'm Dream Coder</h1>
-        <h2 class="home__description">A Software Engineer currently residing in Cheoan, South Korea.</h2>
-        <button class="home__contact">contact me</button>
-    </section>
+        <!-- Home -->
+        <section id="home">
+            <img src="imgs/avatar.png" alt="Merry's portfolio photo" class="home__avatar">
+            <h1 class="home__title">Hello,<br>I'm Dream Coder</h1>
+            <h2 class="home__description">A Software Engineer currently residing in Cheoan, South Korea.</h2>
+            <button class="home__contact">contact me</button>
+        </section>
+    </div>
 
     <!-- About -->
     <section id="about">
+        <div id="about-flex">
         <h1>About me</h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum corporis facere amet sint, sapiente nulla expedita fugiat temporibus, nihil sed quas, mollitia quasi sunt voluptas inventore perferendis asperiores libero? Nostrum!</p>
         <div class="about__majors">
@@ -64,16 +67,19 @@
                 <p class="major__description">Java, JavaScript, Go, NodeJS,<br>Rest APIs, GrapthGL</p>
             </div>
         </div>
+        </div>
         <div class="about__jobs">
             <div class="job">
                 <img src="imgs/jobs/samsung.png" alt="samsung" class="job__logo">
-                <p class="job__name">Currently working at Samsung as Software Engineer</p>
-                <p class="job__period">2019 Sept - Until now</p>
+                <div class="job__description"> <p class="job__name">Currently working at Samsung as Software Engineer</p>
+                <p class="job__period">2019 Sept - Until now</p></div>
+               
             </div>
             <div class="job">
                 <img src="imgs/jobs/samsung.png" alt="samsung" class="job__logo">
-                <p class="job__name">Currently working at Samsung as Software Engineer</p>
-                <p class="job__period">2019 Sept - Until now</p>
+                <div class="job__description"> <p class="job__name">Currently working at Samsung as Software Engineer</p>
+                <p class="job__period">2019 Sept - Until now</p></div>
+               
             </div>
         </div>
     </section>
@@ -135,7 +141,7 @@
             <div class="skillBox__right">
                 <div class="tools">
                     <h3 class="skillset__title">Tools</h3>
-                    <ul class="tools__list">
+                    <ul class="tools__description">
                         <li>Android development tools</li>
                         <li>iOS development tools</li>
                         <li>Visual Studio Code</li>
@@ -238,7 +244,7 @@
                 <div class="testimonial__speech-bubble">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, dolorem dolorum nam odit cum earum fuga eius quaerat. Corporis ex quasi iusto, iure incidunt blanditiis laudantium? Eveniet obcaecati maiores natus.
                     </p>
-                    <p class="speech-bubble__name"><a href="#">Merry</a> / TigerSpike</p>
+                    <p class="speech-bubble__name">Merry <a href="#">/ TigerSpike</a></p>
                 </div>
             </div>
             <div class="testimonial">
@@ -246,7 +252,7 @@
                 <div class="testimonial__speech-bubble">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, dolorem dolorum nam odit cum earum fuga eius quaerat. Corporis ex quasi iusto, iure incidunt blanditiis laudantium? Eveniet obcaecati maiores natus.
                     </p>
-                    <p class="speech-bubble__name"><a href="#">Merry</a> / TigerSpike</p>
+                    <p class="speech-bubble__name">Merry <a href="#">/ TigerSpike</a></p>
                 </div>
             </div>
         </div>
@@ -265,7 +271,7 @@
             </a>
         </div>
         <p class="contact__rights">
-            2020 Dream Coder Merry - All righs reserved
+            2020 Dream Coder Merry - All rights reserved
         </p>
     </section>
 </body>
