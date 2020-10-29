@@ -296,11 +296,12 @@ p {
   align-items: center;
   background: var(--color-light-white);
   margin: 3px;
-  width: 280px;
+  width: 250px;
   height: 250px;
 }
-.project img {
+.project__img {
   height: 170px;
+  max-width: 100%;
   align-self: center;
 }
 .project:nth-of-type(2) img {
@@ -339,4 +340,46 @@ p {
   width: 25px;
   height: 2px;
   margin-top: 8px;
+}
+
+/* Testimonial */
+#testimonial {
+  background-color: var(--color-light-white);
+}
+.testimonials {
+  margin: 40px 0;
+}
+.testimonial {
+  display: flex;
+  margin: 32px 0;
+  align-items: center;
+}
+
+.testimonial__avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.testimonial:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+
+.testimonial__avatar:nth-child(even) {
+  margin-left: 40px;
+}
+.testimonial__avatar:nth-child(odd) {
+  margin-right: 40px;
+}
+
+.testimonial__speech-bubble {
+  background-color: var(--color-white);
+  padding: 18px;
+  border-radius: var(--size-border-radius);
+}
+.testimonial__speech-bubble p {
+  color: var(--color-grey);
+}
+.speech-bubble__name a {
+  color: var(--color-dark-pink);
 }
