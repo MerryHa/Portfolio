@@ -21,8 +21,6 @@ if(link==null){
     return;
 }
     scrollIntoView(link);
-
-
 });
 
 // Handle click on "contact me" button on home
@@ -30,6 +28,42 @@ const homeContactBtn=document.querySelector(".home__contact");
 homeContactBtn.addEventListener("click", ()=>{
     scrollIntoView('#contact');
 });
+
+//Make home slowly fade to transparent as the window scrolls down
+const home=document.querySelector('.home__container');
+const homeHeight=home.getBoundingClientRect().height;
+
+document.addEventListener("scroll",()=>{
+home.style.opacity=1-(window.scrollY/homeHeight)+0.4;
+homeContactBtn.style.opacity=1-(window.scrollY/homeHeight)+0.3;
+});
+
+//Show "arrowUp up" button when scrolling down
+const arrowUp=document.querySelector('.arrow-up');
+document.addEventListener("scroll",()=>{
+if(window.scrollY>homeHeight/2){
+    arrowUp.classList.add('visible');
+}else{
+    arrowUp.classList.remove('visible');
+}
+});
+//Handle click on the "arrow up" button
+arrowUp.addEventListener("click",()=>{
+    scrollIntoView('#home');
+});
+
+//When mouse on contact me btn -> recover opacity
+homeContactBtn.addEventListener("mouseenter",()=>{
+    homeContactBtn.style.opacity=1;
+});
+//when mouse off contact me btn-> lose opacity again
+homeContactBtn.addEventListener('mouseleave', ()=>{
+    homeContactBtn.style.opacity=1-(window.scrollY/homeHeight)+0.3;
+});
+
+
+
+
 function scrollIntoView(selector){
     const scrollTo=document.querySelector(selector);
     scrollTo.scrollIntoView({behavior:"smooth"});
