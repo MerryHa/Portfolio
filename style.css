@@ -124,7 +124,7 @@ p {
 .navbar__toggle-btn {
   position: absolute;
   right: 24px;
-  top: 18px;
+  top: 10px;
   font-size: 30px;
   color: var(--color-white);
   display: none;
@@ -314,6 +314,12 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: all var(--animation-duration) ease-out;
+}
+.work__projects.anim-out {
+  opacity: 0;
+  transform: scale(0.96) translateY(40px);
 }
 .project {
   position: relative;
@@ -324,6 +330,10 @@ p {
   margin: 3px;
   width: 250px;
   height: 250px;
+  transition: all var(--animation-duration) ease-in;
+}
+.project.invisible {
+  display: none;
 }
 .project__img {
   height: 170px;
@@ -432,7 +442,7 @@ p {
 
 /* Arrow-up */
 .arrow-up {
-  background-color: var(--color-orange);
+  background-color: var(--color-pink);
   color: var(--color-white);
   width: 50px;
   height: 50px;
