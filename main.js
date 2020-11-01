@@ -16,6 +16,7 @@ const navbarMenu=document.querySelector('.navbar__menu');
 navbarMenu.addEventListener("click",(event)=>{
     const target=event.target;
     const link=target.dataset.link;
+   
     
 if(link==null){
     return;
@@ -71,6 +72,12 @@ const filter=e.target.dataset.filter||e.target.parentNode.dataset.filter;
 if(filter==null){
     return;
 }
+//Remove selection from the previous item and select the new one
+const active=document.querySelector('.category__btn.selected');
+active.classList.remove('selected');
+const target=e.target.nodeName==='BUTTON'?e.target:e.target.parentNode;
+target.classList.add('selected');
+
 projectContainer.classList.add('anim-out');
 setTimeout(()=>{
     projects.forEach((project)=>{
@@ -85,6 +92,9 @@ setTimeout(()=>{
 },300);
 
 });
+
+
+
 
 function scrollIntoView(selector){
     const scrollTo=document.querySelector(selector);
