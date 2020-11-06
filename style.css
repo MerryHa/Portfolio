@@ -57,9 +57,6 @@ button {
   background-color: transparent;
   padding: 0;
 }
-i {
-  padding: 0;
-}
 
 /* Typography */
 h1 {
@@ -142,11 +139,12 @@ p {
 /* Home */
 #home {
   text-align: center;
-  background: radial-gradient(#faed72, #fab3ab);
+  background: radial-gradient(#faed72, #fab3ab, #fab3ab);
   padding: 120px 40px;
   position: relative;
   overflow: hidden;
 }
+
 .home__avatar {
   width: 300px;
   height: 300px;
@@ -177,10 +175,10 @@ p {
   background-color: var(--color-white-trans);
 }
 .cloud1 {
-  height: 50%;
+  height: 45%;
   position: absolute;
   bottom: 0;
-  left: -800px;
+  left: -400px;
   z-index: 0;
 }
 
@@ -539,6 +537,10 @@ p {
   .cloud1,
   .cloud2 {
     height: 30%;
+  }
+
+  .cloud1 {
+    left: -500px;
   }
   .about__majors {
     flex-direction: column;

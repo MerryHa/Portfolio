@@ -1,5 +1,4 @@
 'use strict';
-
 //Make navbar transparent when it is on the top
 const navbar=document.querySelector('#navbar');
 const navbarHeight=navbar.getBoundingClientRect().height;
@@ -38,12 +37,12 @@ homeContactBtn.addEventListener("click", ()=>{
 });
 
 //Make home slowly fade to transparent as the window scrolls down
-const home=document.querySelector('.home__container');
-const homeHeight=home.getBoundingClientRect().height;
+const homeContainer=document.querySelector('.home__container');
+const homeHeight=homeContainer.getBoundingClientRect().height;
 
 document.addEventListener("scroll",()=>{
-home.style.opacity=1-(window.scrollY/homeHeight)+0.4;
-homeContactBtn.style.opacity=1-(window.scrollY/homeHeight)+0.3;
+homeContainer.style.opacity=1-(window.scrollY/homeHeight)+0.6;
+homeContactBtn.style.opacity=1-(window.scrollY/homeHeight)+0.5;
 });
 
 //Show "arrowUp up" button when scrolling down
@@ -67,7 +66,7 @@ homeContactBtn.addEventListener("mouseenter",()=>{
 });
 //when mouse off contact me btn-> lose opacity again
 homeContactBtn.addEventListener('mouseleave', ()=>{
-    homeContactBtn.style.opacity=1-(window.scrollY/homeHeight)+0.3;
+    homeContactBtn.style.opacity=1-(window.scrollY/homeHeight)+0.5;
 });
 
 //Project
@@ -99,7 +98,6 @@ setTimeout(()=>{
 },300);
 
 });
-
 
 function scrollIntoView(selector){
     const scrollTo=document.querySelector(selector);
